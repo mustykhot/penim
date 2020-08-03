@@ -1,0 +1,121 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Pen Image",
+    "description": "A web app that collects text from users, allows them to upload images and customizes the text on the image",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "host": "localhost:8080",
+  "basePath": "/api/docs",
+  "tags": [{
+    "name": "Image",
+    "description": "API for image manipulation"
+  }],
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/search": {
+      "get": {
+        "summary": "Allows users to search for image",
+        "description": "Returns list of images from the users search request",
+        "parameters": [{
+          "name": "request body",
+          "in": "body",
+          "description": "Current page number and number of images to return per page",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "page": {
+                "type": "integer"
+              },
+              "per_page": {
+                "type": "integer"
+              }
+            }
+          }
+        }],
+        "responses": {
+          "200": {
+            "description": "A list of image returned from response"
+          }
+        }
+      }
+    },
+    "/text": {
+      "post": {
+        "summary": "Allows users to upload image and text for manipulation",
+        "description": "Returns image after manipulation",
+        "parameters": [{
+          "name": "request body",
+          "in": "body",
+          "description": "",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "width": {
+                "type": "string"
+              },
+              "crop": {
+                "type": "string"
+              },
+              "font-family": {
+                "type": "string"
+              },
+              "font-weight": {
+                "type": "string"
+              },
+              "font-size": {
+                "type": "string"
+              },
+              "font-style": {
+                "type": "string"
+              },
+              "font-decoration": {
+                "type": "string"
+              },
+              "text-aign": {
+                "type": "string"
+              },
+              "text": {
+                "type": "string"
+              },
+              "gravity": {
+                "type": "string"
+              },
+              "x": {
+                "type": "string"
+              },
+              "y": {
+                "type": "string"
+              },
+              "color": {
+                "type": "string"
+              }
+            }
+          }
+        }],
+        "responses": {
+          "200": {
+            "description": "Returned imaged after manipulation"
+          }
+        }
+      }
+    }
+
+  }
+
+}

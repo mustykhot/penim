@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<meta charset="UTF-8" />
+	    <meta name="viewport" content="width=device-width,initial-scale=1">
+	    <title>Pen Image</title>
+	    <link href="style.css" rel="stylesheet" type="text/css">
+	    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Dosis&family=Open+Sans+Condensed:wght@300&family=Ubuntu:wght@500&family=Grenze+Gotisch:wght@100&family=Quicksand:wght@300&family=Josefin+Sans:wght@100&family=Jura&family=MuseoModerno&family=Orbitron&family=Playfair+Display:ital,wght@0,400;1,500&family=Yanone+Kaffeesatz:wght@200;700&display=swap" rel="stylesheet">
+	   <!--<link href="https://fonts.googleapis.com/css2? family=Dancing+Script&family=Dosis &family=Grenze+Gotisch:wght@100 &family=Josefin+Sans:wght@100&family=Jura&family=MuseoModerno&family=Orbitron&family=Playfair+Display:ital,wght@0,400;1,500 &family=Quicksand:wght@300 &family=Yanone+Kaffeesatz:wght@200;700&display=swap" rel="stylesheet">-->
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+		<link rel="shortcut icon" href="favicon.jpg" type="image/x-icon">
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	</head>
+	<body>
+		<h2><span>Pen</span>  Images</h2>
+	   <form class="form" id="formElem">
+		   <h4>Upload a picture</h4>
+		   <div class="first">
+			  <input class="upload" type="file" name="picture" id="upload"  >
+			  <input type="submit" class="unsplasht" value="Choose from unsplash">
+		   </div>
+		   <div class="unsplash">
+			   <div class="flex"> 
+					<input type="text" id="search" placeholder="Input Category of Image">
+					<input type="submit" class="cont" value="Continue">
+					
+			   </div>
+			   <div class="unsplashimages">
+			   		<h4>Click on the image of your choice to select the image as background.</h4>
+				    <img src="" alt="unsplash image" class="one" id="one">
+				    <img src="" alt="unsplash image" class="one" id="two">
+				    <img src="" alt="unsplash image" class="one" id="three">
+				    <img src="" alt="unsplash image" class="one" id="four">
+				    <img src="" alt="unsplash image" class="one" id="five">
+			   </div>
+		   </div>
+           <div class="flexp">
+			<div class="preview">
+				<h4>Image Preview</h4>
+				<div class="prevbox">
+					<img class="image_img" src="">
+				</div>
+				<select name="" id="">
+					<option id="" value="crop">Crop</option>
+					<option id="crop1" value="fit">Fit</option>
+					<option id="crop2" value="scale">Scale</option>
+				</select>
+			</div>
+			<div class="prev2">
+				<div class="group kj">
+					<h4>Text</h4>
+					<input class="text" type="text" name="" id="txt" >
+				</div>
+				<div class="group two">
+					<select name="" id="">
+						<option id="fontFamily" value="">Font Family</option>
+						<option id="fontFamily1" value="Arial">Arial</option>
+						<option id="fontFamily2" value="Roboto">Roboto</option>
+						<option id="fontFamily3" value="Open Sans">Open Sans</option>
+						<option id="fontFamily4" value="Lato">Lato</option>
+						<option id="fontFamily5" value="Slabo">Slabo</option>
+						<option id="fontFamily6" value="Oswald">Oswald</option>
+						<option id="fontFamily7" value="Source Sans Pro">Source Sans Pro</option>
+						<option id="fontFamily8" value="Montserrat">Montserrat</option>
+						<option id="fontFamily9" value="Raleway">Raleway</option>
+					</select>
+                    <select name="" id="">
+						<option value="">Font Style</option>
+						<option id="fontStyle1" value="normal">Normal</option>
+						<option id="fontStyle2" value="italics">Italics</option>
+					</select>
+					<select name="" id="">
+						<option id="" value="">Font Weight</option>
+						<option id="fontSize1" value="normal">Normal</option>
+						<option id="fontSize2" value="bold">Bold</option>
+						<option id="fontSize3"value="thin">Thin</option>
+						<option id="fontSize4" value="light">Light</option>
+					
+						
+					</select>
+					<input type="number" name="" placeholder="Font size" id="fontSize">
+
+				</div>
+
+				<div class="group two s">
+					<select name="" id="">
+						<option value="">Text Decoration</option>
+						<option id="textDeco1" value="normal">Normal</option>
+						<option id="textDeco2" value="underline">Underline</option>
+						<option id="textDeco3" value="strikethrough">Strike Through</option>
+					</select>
+                    <select name="" id="">
+						<option value="">Text Align</option>
+						<option id="textAlign1" value="center">Center</option>
+						<option id="textAlign2" value="left">Left</option>
+						<option id="textAlign3" value="right">Right</option>
+						<option id="textAlign4" value="end">End</option>
+						<option id="textAlign5" value="start">Start</option>
+						<option id="textAlign6" value="justify">Justify</option>
+					</select>
+					<select name="" id="">
+						<option value="">Gravity</option>
+						<option id="gravity1" value="north">North</option>
+						<option id="gravity2" value="south">South</option>
+						<option id="gravity3" value="east">East</option>
+						<option id="gravity4" value="west">West</option>
+						<option id="gravity5" value="northeast">North East</option>
+						<option id="gravity6" value="northwest">North West</option>
+						<option id="gravity7" value="southeast">South East</option>
+						<option id="gravity8" value="southwest">South West</option>
+					</select>
+					<div class="xory">
+						<input type="number" name="" placeholder="X:" id="x">
+						<input type="number" name="" placeholder="Y:" id="y">
+					</div>
+				
+					
+
+				</div>
+				<div class="group twod">
+					<input type="number" name="" id="imgWidth" placeholder="Image width">
+					<input type="color" id="color">
+					<input type="submit" class="imagePrev" value="Preview">
+				</div>
+				<div class="group twof">
+					<a href="" class="download">Download</a>
+				</div>
+
+				
+
+			</div>
+		   </div>
+		 
+		   
+	   </form>
+	 <script type="text/javascript" src="js/main.js"></script>
+	 <script type="text/javascript" src="js/upload.js"></script>
+	 <script type="text/javascript" src="js/search.js"></script>
+	 <script type="text/javascript" src="js/image.js"></script>
+	 <script type="text/javascript" src="js/text.js"></script>
+	</body>
+</html>

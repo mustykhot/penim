@@ -1,0 +1,39 @@
+{
+  "name": "ohw-2020-22",
+  "version": "1.0.0",
+  "description": "A web app that writes on images.",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DSC-Unilag/ohw-2020-22.git"
+  },
+  "keywords": [
+    "pen",
+    "image",
+    "ohw"
+  ],
+  "author": "ohw2020-22 team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DSC-Unilag/ohw-2020-22/issues"
+  },
+  "homepage": "https://github.com/DSC-Unilag/ohw-2020-22#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cloudinary": "^1.22.0",
+    "config": "^3.3.1",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^3.23.3",
+    "multer": "^1.4.2",
+    "node-fetch": "^2.6.0",
+    "nodemon": "^2.0.4",
+    "unsplash-js": "^6.0.0",
+    "swagger-ui-express": "^4.1.4"
+  }
+}
